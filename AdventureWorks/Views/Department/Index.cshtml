@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdventureWorksLayout.cshtml";
+}
+
+@model IEnumerable<BusinessLayer.Models.DepartmentModel>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="wrapper">
+        <div id="pre-loader"></div>
+
+        <div class="content-wrapper">
+            <!-- Container-fluid starts -->
+            <div class="container-fluid">
+                <!-- Main content starts -->
+                <div>
+                    <!-- Row Starts -->
+                    <div class="row">
+                        <div class="col-sm-12 p-0">
+                            <div class="main-header">
+                                <h4>Department-List</h4>
+                                <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html"><i class="icofont icofont-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="#!">Human Resources</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="product-list.html">Department List</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row end -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-header-text">Department List</h5>
+                                    @Html.ActionLink("Add Department", "Add", "Department", new { @class = "btn btn-primary waves-effect waves-light f-right md-trigger icofont icofont-plus m-r-5" })
+                                    @*<button type="button" class="btn btn-primary waves-effect waves-light f-right md-trigger" data-modal="modaldepartment">
+                                            <i class="icofont icofont-plus m-r-5"></i>  Add Department
+                                        </button>*@
+                                    @*<a href="javascript:void(0);" class="anchorDetail btn btn-primary waves-effect waves-light f-right md-trigger"> <i class="icofont icofont-plus m-r-5"></i>  Add Department</a>*@
+                                </div>
+                                <div>
+                                    <div class="row">
+
+                                        <div class="table-content p-l-30 p-r-30">
+                                            <div class="project-table">
+                                                <table id="e-product-list" class="table table-striped dt-responsive nowrap" width="100%" cellspacing="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>@Html.ActionLink("DepartmentName", "Index", new { SortOrder = ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc"), SortBy = "DepartmentName", PageNumber = ViewBag.PageNumber == 0 ? 1 : ViewBag.PageNumber })</th>
+                                                            <th>@Html.ActionLink("GroupName", "Index", new { SortOrder = ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc"), SortBy = "GroupName", PageNumber = ViewBag.PageNumber == 0 ? 1 : ViewBag.PageNumber })</th>
+                                                            <th>@Html.ActionLink("ModifiedDate", "Index", new { SortOrder = ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc"), SortBy = "ModifiedDate", PageNumber = ViewBag.PageNumber == 0 ? 1 : ViewBag.PageNumber })</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach (var dt in Model)
+                                                        {
+                                                            @Html.HiddenFor(m => dt.DepartmentId)
+
+                                                            <tr>
+                                                                <td class="pro-name">
+                                                                    <h6>@dt.DepartmentName</h6>
+                                                                </td>
+                                                                <td>@dt.GroupName</td>
+                                                                <td><label class="text-danger">@dt.ModifiedDate</label></td>
+                                                                <td class="action-icon">
+
+                                                                    <a href="@Url.Action("Edit", "Department", new { DepartmentId = dt.DepartmentId })" class="m-r-15 text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="icofont icofont-edit"></i></a>
+                                                                    <a href="@Url.Action("Delete", "Department", new { DepartmentId = dt.DepartmentId })" class="text-muted alert-confirm m-b-10" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'alert-confirm']);"><i class="icofont icofont-ui-delete"></i></a>
+                                                                </td>
+                                                            </tr>
+
+                                                        }
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row">
+                                            <div class="col-md-5"></div>
+                                            <div class="col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="e-product-list_paginate">
+                                                    <ul class="pagination">-->
+                                                        @*<li class="paginate_button page-item previous disabled" id="e-product-list_previous">
+                                                                <a href="#" aria-controls="e-product-list" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                                            </li>*@
+                                                        <!--<li class="paginate_button page-item active"><a href="#" aria-controls="e-product-list" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                        <li class="paginate_button page-item "><a href="#" aria-controls="e-product-list" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>-->
+                                                        @*<li class="paginate_button page-item next" id="e-product-list_next"><a href="#" aria-controls="e-product-list" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>*@
+                                                    <!--</ul>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="row">
+                                            <div class="col-md-5"></div>
+                                            <div class="col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="e-product-list_paginate">
+
+                                                    @{
+                                                        double totalPages = ViewBag.TotalPage;
+                                                        for (int i = 1; i <= totalPages; i++)
+
+                                                        {
+                                                            <ul class="pagination">
+                                                                @if (i == ViewBag.PageNumber)
+                                                                {
+                                                                    <li class="paginate_button page-item active">
+                                                                        <span aria-controls="e-product-list" data-dt-idx="1" tabindex="0" class="page-link">@Html.ActionLink(i.ToString(), "Index", new { SortOrder = ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder, SortBy = ViewBag.SortBy == null ? "DepartmentName" : ViewBag.SortBy, PageNumber = i })</span>
+                                                                    </li>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <li class="paginate_button page-item">
+                                                                        <span href="" aria-controls="e-product-list" data-dt-idx="1" tabindex="0" class="page-link">@Html.ActionLink(i.ToString(), "Index", new { SortOrder = ViewBag.SortOrder == null ? "Asc" : ViewBag.SortOrder, SortBy = ViewBag.SortBy == null ? "DepartmentName" : ViewBag.SortBy, PageNumber = i })</span>
+                                                                    </li>
+                                                                }
+
+
+
+                                                            </ul>
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container-fluid ends -->
+
+        </div>
+    </div>
+
+
+
+}
+
+
+
+
+

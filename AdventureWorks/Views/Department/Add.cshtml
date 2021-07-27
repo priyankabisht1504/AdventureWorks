@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdventureWorksLayout.cshtml";
+}
+@model BusinessLayer.Models.DepartmentModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div>
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>Add Department</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html"><i class="icofont icofont-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#!">Human Resources</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="product-edit.html">Add Department details</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header"><h5 class="card-header-text">Add Department</h5></div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="product-edit">
+                                        <ul class="nav nav-tabs nav-justified md-tabs " role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#home7" role="tab">
+                                                    <div class="f-26">
+                                                        <i class="icofont icofont-edit"></i>
+                                                    </div>
+                                                    Department
+                                                </a>
+                                                <div class="slide"></div>
+                                            </li>
+
+                                        </ul>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="home7" role="tabpanel">
+                                                <form class="md-float-material card-block">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                <span class="md-add-on">
+                                                                    <i class="icofont icofont-ui-user"></i>
+                                                                </span>
+                                                                <div class="md-input-wrapper">
+                                                                    @Html.TextBoxFor(m => m.DepartmentName, new { @class = "md-form-control", @type = "text" })
+                                                                    @*<input type="text" class="md-form-control">*@
+                                                                    <label>Department Name</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                <span class="md-add-on">
+                                                                    <i class="icofont icofont-man-in-glasses"></i>
+                                                                </span>
+                                                                <div class="md-input-wrapper">
+                                                                    @Html.TextBoxFor(m => m.GroupName, new { @class = "md-form-control", @type = "text" })
+
+                                                                    @*<input type="text" class="md-form-control">*@
+                                                                    <label>Group Name</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                <span class="md-add-on">
+                                                                    <i class="icofont icofont-copy-alt"></i>
+                                                                </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <textarea class="md-form-control" cols="2" rows="2"></textarea>
+                                                                    <label>Department Description</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="md-group-add-on">
+                                                                <span class="md-add-on">
+                                                                    <i class="icofont icofont-chart-bar-graph"></i>
+                                                                </span>
+                                                                <div class="md-input-wrapper">
+                                                                    <select class="md-form-control" id="Select">
+                                                                        <option>Status Select</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option>4</option>
+                                                                        <option>5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="text-center">
+                                                            <input type="submit" value="Save" class="btn btn-primary waves-effect waves-light m-r-10" />
+                                                            @*<button type="button" class="btn btn-primary waves-effect waves-light m-r-10">
+                                                                    Save
+                                                                </button>*@
+                                                            <button type="button" class="btn btn-warning waves-effect waves-light">
+                                                                Discard
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid ends -->
+    </div>
+}

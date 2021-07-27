@@ -1,0 +1,550 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdventureWorksLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <!-- Main content starts -->
+            <div>
+                <!-- Row Starts -->
+                <div class="row">
+                    <div class="col-sm-12 p-0">
+                        <div class="main-header">
+                            <h4>CRM-Contact</h4>
+                            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">
+                                        <i class="icofont icofont-home"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#">CRM</a></li>
+                                <li class="breadcrumb-item"><a href="crm-contact.html">CRM-Contact</a></li>
+                            </ol>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-header-text d-inline-block m-b-0 f-w-600">
+                                    Contact
+                                </h5>
+                                <button type="button" class="btn btn-primary waves-effect waves-light f-right md-trigger" data-modal="modal-13" data-toggle="modal">
+                                    <i class="icofont icofont-plus m-r-5"></i>  Add Contact
+                                </button>
+                            </div>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="table-content crm-table">
+                                        <div class="project-table">
+                                            <table id="crm-contact" class="table table-striped nowrap table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                        </th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Age</th>
+                                                        <th>Phone No</th>
+                                                        <th>Start Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>
+                                                        </th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Age</th>
+                                                        <th>Phone No</th>
+                                                        <th>Start Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-1.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Sortino
+                                                        </td>
+                                                        <td>Sortino@domain.com</td>
+                                                        <td>Accountant</td>
+                                                        <td>New York</td>
+                                                        <td>45</td>
+                                                        <td>+447662552550</td>
+                                                        <td>12/12/2016</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-2.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+                                                        <td class="pro-name">
+                                                            Larry
+                                                        </td>
+                                                        <td>Larry@domain.com</td>
+                                                        <td>Web Designer</td>
+                                                        <td>Singapore</td>
+                                                        <td>25</td>
+                                                        <td>+442566156222</td>
+                                                        <td>6/10/2016</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-3.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Jacob
+                                                        </td>
+                                                        <td>Jacob@domain.com</td>
+                                                        <td>Web Developer</td>
+                                                        <td>London</td>
+                                                        <td>45</td>
+                                                        <td>+419996156222</td>
+                                                        <td>11/09/2014</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-5.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Mark
+                                                        </td>
+                                                        <td>Mark@domain.com</td>
+                                                        <td>Chief Financial Officer (CFO)</td>
+                                                        <td>Abu Dhabi</td>
+                                                        <td>33</td>
+                                                        <td>+124455645889</td>
+                                                        <td>01/05/2013</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-4.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Steve
+                                                        </td>
+                                                        <td>Steve@domain.com</td>
+                                                        <td>Customer Support</td>
+                                                        <td>New York</td>
+                                                        <td>48</td>
+                                                        <td>+111322574563</td>
+                                                        <td>02/1/2012</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-1.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Larry the Bird
+                                                        </td>
+                                                        <td>Larry@domain.com</td>
+                                                        <td>Team Leader</td>
+                                                        <td>San Francisco</td>
+                                                        <td>22</td>
+                                                        <td>+146772555563</td>
+                                                        <td>19/12/2015</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-2.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Colleen Hurst
+                                                        </td>
+                                                        <td>ColleenHurst@domain.com</td>
+                                                        <td>Systems Administrator</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>61</td>
+                                                        <td>+132563566000</td>
+                                                        <td>12/05/2016</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-3.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Charde Marshall
+                                                        </td>
+                                                        <td>Charde@domain.com</td>
+                                                        <td>Director</td>
+                                                        <td>Hong Kong</td>
+                                                        <td>35</td>
+                                                        <td>+124567254789</td>
+                                                        <td>06/09/2016</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-4.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Cedric Kelly
+                                                        </td>
+                                                        <td>Cedric@domain.com</td>
+                                                        <td>Senior Marketing Designer</td>
+                                                        <td>London</td>
+                                                        <td>38</td>
+                                                        <td>+142632446563</td>
+                                                        <td>26/03/2012</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-5.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Caesar Vance
+                                                        </td>
+                                                        <td>Caesar@domain.com</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>New York</td>
+                                                        <td>48</td>
+                                                        <td>+163632525963</td>
+                                                        <td>11/04/2013</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-1.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Brielle Williamson
+                                                        </td>
+                                                        <td>Brielle@domain.com</td>
+                                                        <td>Secretary</td>
+                                                        <td>San Francisco</td>
+                                                        <td>41</td>
+                                                        <td>+198522564593</td>
+                                                        <td>12/07/2016</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-2.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Brenden Wagner
+                                                        </td>
+                                                        <td>Brenden@domain.com</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>Sidney</td>
+                                                        <td>24</td>
+                                                        <td>+262536566563</td>
+                                                        <td>26/01/2015</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-3.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Bradley Greer
+                                                        </td>
+                                                        <td>Bradley@domain.com</td>
+                                                        <td>Marketing Designer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>43</td>
+                                                        <td>+464272562212</td>
+                                                        <td>30/08/2014</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-4.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Ashton Cox
+                                                        </td>
+                                                        <td>Ashton@domain.com</td>
+                                                        <td>Office Manager</td>
+                                                        <td>San Francisco</td>
+                                                        <td>47</td>
+                                                        <td>+173698546794</td>
+                                                        <td>19/09/2014</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-5.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Angelica Ramos
+                                                        </td>
+                                                        <td>Angelica@domain.com</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>Tokyo</td>
+                                                        <td>39</td>
+                                                        <td>+123362566511</td>
+                                                        <td>14/02/2012</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-1.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Airi Satou
+                                                        </td>
+                                                        <td>Airi@domain.com</td>
+                                                        <td>Javascript Developer</td>
+                                                        <td>Singapore</td>
+                                                        <td>32</td>
+                                                        <td>+138820665637</td>
+                                                        <td>16/07/2014</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-2.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            Jenu Shash
+                                                        </td>
+                                                        <td>Jenu@domain.com</td>
+                                                        <td>Director</td>
+                                                        <td>Bogota</td>
+                                                        <td>28</td>
+                                                        <td>+144422563456</td>
+                                                        <td>22/12/2011</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+
+                                                            <img src="~/Content/assets/images/avatar-3.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            parimal
+                                                        </td>
+                                                        <td>parimal@domain.com</td>
+                                                        <td>Financial Controller</td>
+                                                        <td>London</td>
+                                                        <td>41</td>
+                                                        <td>+169632566511</td>
+                                                        <td>28/04/2013</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="~/Content/assets/images/avatar-5.png" class="d-inline-block img-circle " alt="tbl">
+                                                        </td>
+
+                                                        <td class="pro-name">
+                                                            krish patel
+                                                        </td>
+                                                        <td>krish@domain.com</td>
+                                                        <td>Developer</td>
+                                                        <td>George Town</td>
+                                                        <td>30</td>
+                                                        <td>+362532566563</td>
+                                                        <td>06/12/2012</td>
+                                                        <td class="action-icon">
+                                                            <a href="javascript:;" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                                            <a href="javascript:;" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Contact Start Model -->
+        <div class="md-modal md-effect-13 addcontact" id="modal-13">
+            <div class="md-content">
+                <h3 class="f-26">Add Contact</h3>
+                <div>
+
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-ui-user"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control" />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-ui-email"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="Email" class="md-form-control" />
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-opposite"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control" />
+                            <label>Position</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-ui-office"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" class="md-form-control" />
+                            <label>Office</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-funky-man"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="number" class="md-form-control" />
+                            <label>Age</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-ui-cell-phone"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="number" class="md-form-control" />
+                            <label>Phone No</label>
+                        </div>
+                    </div>
+                    <div class="md-group-add-on">
+                        <span class="md-add-on">
+                            <i class="icofont icofont-ui-calendar"></i>
+                        </span>
+                        <div class="md-input-wrapper">
+                            <input type="text" id="date" class="md-form-control md-static">
+                            <label>Birthday Date</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary waves-effect m-r-20 f-w-600 d-inline-block">Save</button>
+                        <button type="button" class="btn btn-primary waves-effect m-r-20 f-w-600 md-close d-inline-block">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay"></div>
+        <!-- Add Contact Ends Model-->
+        <!-- Container-fluid ends -->
+    </div>
+}
+
